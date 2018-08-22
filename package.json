@@ -1,7 +1,23 @@
 {
   "name": "dateblock",
-  "version": "1.0.0",
+  "version": "0.1.1",
+  "dependencies": {},
+  "main": "dateblock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madumas/dateblock.git"
+  },
+  "author": "Marc-André Dumas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madumas/dateblock/issues"
+  },
+  "homepage": "https://github.com/madumas/dateblock#readme",
+  "description": "A simple JavaScript library to determine the first Ethereum block after a specific date",
   "dependencies": {
-    
+    "web3": "^1.0.0-beta.35"
   }
 }
