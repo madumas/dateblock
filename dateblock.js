@@ -22,11 +22,10 @@ class DateBlock {
             .catch(console.log);
         })
         .then (function (guess) {
-            console.log("guess "+guess.number + "curblock "+curBlock.number);
-            if ( Math.abs(guess.number - curBlock.number) > 1 || guess.number < curBlock.number) {
+            if ( Math.abs(guess.number - curBlock.number) > 1 || Date(guess.timestamp*1000)<targetDate) {
                 return  _this.guessBlock(guess, targetDate);
             } else {
-                return(curBlock);
+                return(guess);
             }
         });
     }
