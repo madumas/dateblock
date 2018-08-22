@@ -1,24 +1,24 @@
 
-**dateblock.js** is a simple JavaScript library to determine the first Ethereum block after a specific date
+**dateblock** is a simple JavaScript library to determine the first Ethereum block after a specific date
 
 ## Usage
 
 Use NPM to install the library:
 ```
-npm install @madumas/dateblock
+npm install dateblock
 ```
 
 Then include it:
 
 ```
-import DateBlock from '@madumas/dateblock';
+import DateBlock from 'dateblock';
 // or:
-const DateBlock = require('@madumas/dateblock');
+const DateBlock = require('dateblock');
 ```
 
 Example:
 ```
-var DateBlock = require("../../dateblock/dateblock.js")
+var DateBlock = require("dateblock")
 const Web3 = require("web3");
 const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
 
