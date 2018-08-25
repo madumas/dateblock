@@ -11,7 +11,6 @@ class DateBlock {
     }
 
     async guessBlock(curBlock, targetDate, iteration) {
-        console.log(iteration);
         let _this=this;
         return new Promise((fulfil) => {
             let curBlockDate = new Date(curBlock.timestamp * 1000);
