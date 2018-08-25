@@ -1,5 +1,5 @@
 
-**dateblock** is a simple JavaScript library to determine the first Ethereum block after a specific date
+**dateblock** is a simple JavaScript node.js library to determine the first Ethereum block after a specific date
 
 ## Usage
 
@@ -26,7 +26,7 @@ var dateblock = new DateBlock(web3);
 
 var date = new Date(2018,07,20,0,0,0,0);
 console.log(date);
-dateblock.getBlock(date).then(function(block){
+dateblock.getBlock(date).then(function(block){  
     console.log(block.number)
     console.log(new Date(block.timestamp*1000));
 });

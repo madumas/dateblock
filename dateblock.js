@@ -22,6 +22,7 @@ class DateBlock {
             .catch(console.log);
         })
         .then (function (guess) {
+            if(guess === null ) {throw "Future date or block not mined for this date";}
             if ( Math.abs(guess.number - curBlock.number) > 1 || Date(guess.timestamp*1000)<targetDate) {
                 return  _this.guessBlock(guess, targetDate);
             } else {
