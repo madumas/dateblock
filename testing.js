@@ -5,7 +5,7 @@ const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:8546'
 
 var DB = new DateBlock(web3);
 
-var date = new Date(2018,07,25,18,0,3,0);
+var date = new Date(2018,07,25,18,0,0,200);
 console.log(date);
 DB.getBlock(date).then(function(block){
     console.log(block.number)

@@ -10,21 +10,21 @@ class DateBlock {
         this.web3 = web3;
     }
 
-    async guessBlock(curBlock, targetDate) {
-
+    async guessBlock(curBlock, targetDate, iteration) {
+        console.log(iteration);
         let _this=this;
         return new Promise((fulfil) => {
             let curBlockDate = new Date(curBlock.timestamp * 1000);
             let diff = (curBlockDate - targetDate) / 1000;
-            let guess = Number(curBlock.number - diff / 14).toFixed(0);
+            let guess = Math.floor(curBlock.number - diff / (15-iteration%15));
 
             _this.web3.eth.getBlock(guess).then(fulfil)
             .catch(console.log);
         })
         .then (function (guess) {
             if(guess === null ) {throw "Future date or block not mined for this date";}
-            if ( Math.abs(guess.number - curBlock.number) > 1 || Date(guess.timestamp*1000)<targetDate) {
-                return  _this.guessBlock(guess, targetDate);
+            if ( Math.abs(guess.number - curBlock.number) > 1 ) { //|| Date(guess.timestamp*1000)>targetDate
+                return  _this.guessBlock(guess, targetDate, ++iteration);
             } else {
                 return(guess);
             }
@@ -37,7 +37,7 @@ class DateBlock {
         //try to guess the block
         return new Promise((fulfil) => {
             this.web3.eth.getBlock('latest').then(function (block) {
-                _this.guessBlock(block, date).then(fulfil).catch(console.log);
+                _this.guessBlock(block, date, 0).then(fulfil).catch(console.log);
             }).catch(console.log);
         })
 
