@@ -1,6 +1,6 @@
 {
   "name": "dateblock",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "dependencies": {},
   "main": "dateblock.js",
   "scripts": {
