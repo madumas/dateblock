@@ -15,8 +15,9 @@ class DateBlock {
         return new Promise((fulfil) => {
             let curBlockDate = new Date(curBlock.timestamp * 1000);
             let diff = (curBlockDate - targetDate) / 1000;
-            let guess = Math.floor(curBlock.number - diff / (15-iteration%15));
-
+            let guess = Math.floor(curBlock.number - diff / (15+iteration));
+            console.debug(curBlockDate + " - " + targetDate);
+            console.debug("Iteration: "+iteration+", curBlock.number:"+curBlock.number+", guess"+guess);
             _this.web3.eth.getBlock(guess).then(fulfil)
             .catch(console.log);
         })
