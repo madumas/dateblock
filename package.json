@@ -18,5 +18,5 @@
     "url": "https://github.com/madumas/dateblock/issues"
   },
   "homepage": "https://github.com/madumas/dateblock#readme",
-  "description": "A simple JavaScript library to determine the first Ethereum block after a specific date"
+  "description": "A simple JavaScript library to estimate the Ethereum matching a specific date and time."
 }

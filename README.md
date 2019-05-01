@@ -1,5 +1,8 @@
 
-**dateblock** is a simple JavaScript node.js library to determine the first Ethereum block after a specific date
+**dateblock** is a simple JavaScript node.js library to estimage the Ethereum block matching a specific date and time.
+
+It determines the block from the blocktime by doing a doing several requests to an ethereum node until it finds a block
+that is 1 block before or after the desired time.
 
 ## Usage
 
