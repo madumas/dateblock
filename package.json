@@ -1,7 +1,9 @@
 {
   "name": "dateblock",
-  "version": "0.1.5",
-  "dependencies": {},
+  "version": "0.1.6",
+  "dependencies": {
+    "web3": "^1.0.0-beta.35"
+  },
   "main": "dateblock.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,8 +18,5 @@
     "url": "https://github.com/madumas/dateblock/issues"
   },
   "homepage": "https://github.com/madumas/dateblock#readme",
-  "description": "A simple JavaScript library to determine the first Ethereum block after a specific date",
-  "dependencies": {
-    "web3": "^1.0.0-beta.35"
-  }
+  "description": "A simple JavaScript library to determine the first Ethereum block after a specific date"
 }
